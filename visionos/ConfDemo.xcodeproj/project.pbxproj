@@ -13,6 +13,10 @@
 		767CEBBC2B582F6B000139AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CEBBB2B582F6B000139AD /* AppDelegate.swift */; };
 		767CEBBE2B582F78000139AD /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CEBBD2B582F78000139AD /* App.swift */; };
 		7699B88040F8A987B510C191 /* libPods-ConfDemo-ConfDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ConfDemo-ConfDemoTests.a */; };
+		76EF59892BDF9A9A00A2FA17 /* CKImmersiveSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF59882BDF9A9A00A2FA17 /* CKImmersiveSpace.swift */; };
+		76EF598F2BDFA0D000A2FA17 /* CKSpace in Resources */ = {isa = PBXBuildFile; fileRef = 76EF598E2BDFA0D000A2FA17 /* CKSpace */; };
+		76EF59922BDFA19200A2FA17 /* CKSpace in Frameworks */ = {isa = PBXBuildFile; productRef = 76EF59912BDFA19200A2FA17 /* CKSpace */; };
+		76EF59942BDFA4FF00A2FA17 /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 76EF59932BDFA4FF00A2FA17 /* ImageBasedLighting.skybox */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,9 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ConfDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		767CEBBB2B582F6B000139AD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ConfDemo/AppDelegate.swift; sourceTree = "<group>"; };
 		767CEBBD2B582F78000139AD /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = ConfDemo/App.swift; sourceTree = "<group>"; };
+		76EF59882BDF9A9A00A2FA17 /* CKImmersiveSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKImmersiveSpace.swift; sourceTree = "<group>"; };
+		76EF598E2BDFA0D000A2FA17 /* CKSpace */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CKSpace; sourceTree = "<group>"; };
+		76EF59932BDFA4FF00A2FA17 /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ConfDemo-ConfDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfDemo-ConfDemoTests.release.xcconfig"; path = "Target Support Files/Pods-ConfDemo-ConfDemoTests/Pods-ConfDemo-ConfDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -57,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-ConfDemo.a in Frameworks */,
+				76EF59922BDFA19200A2FA17 /* CKSpace in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,8 @@
 			children = (
 				767CEBBB2B582F6B000139AD /* AppDelegate.swift */,
 				767CEBBD2B582F78000139AD /* App.swift */,
+				76EF59932BDFA4FF00A2FA17 /* ImageBasedLighting.skybox */,
+				76EF59882BDF9A9A00A2FA17 /* CKImmersiveSpace.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 			);
@@ -101,6 +111,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		76EF598C2BDF9F9F00A2FA17 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				76EF598E2BDFA0D000A2FA17 /* CKSpace */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAE1A68108700A75B9A /* ConfDemo */,
+				76EF598C2BDF9F9F00A2FA17 /* Packages */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ConfDemoTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -182,6 +201,9 @@
 			dependencies = (
 			);
 			name = ConfDemo;
+			packageProductDependencies = (
+				76EF59912BDFA19200A2FA17 /* CKSpace */,
+			);
 			productName = ConfDemo;
 			productReference = 13B07F961A680F5B00A75B9A /* ConfDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				76EF598F2BDFA0D000A2FA17 /* CKSpace in Resources */,
+				76EF59942BDFA4FF00A2FA17 /* ImageBasedLighting.skybox in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76EF59892BDF9A9A00A2FA17 /* CKImmersiveSpace.swift in Sources */,
 				767CEBBC2B582F6B000139AD /* AppDelegate.swift in Sources */,
 				767CEBBE2B582F78000139AD /* App.swift in Sources */,
 			);
@@ -662,6 +687,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		76EF59912BDFA19200A2FA17 /* CKSpace */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CKSpace;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }

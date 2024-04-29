@@ -1,0 +1,23 @@
+{
+  "315088BF-2E1A-4D03-9EDE-47E3BAB77B37" : {
+    "objectMetadataList" : [
+      [
+        "315088BF-2E1A-4D03-9EDE-47E3BAB77B37",
+        "Root",
+        "Planets"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "315088BF-2E1A-4D03-9EDE-47E3BAB77B37",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}

@@ -1,0 +1,198 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "CS_Logo" (
+        active = true
+        prepend references = @CS_Logo.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.05, 0.05, 0.05)
+        float3 xformOp:translate = (0.0000084117055, 2.0606546, -1.6994503)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Planets" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        prepend references = @Planets.usdz@
+    )
+    {
+        rel material:binding = </Root/Material_032> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.44779813, 0, 0, 0.89413464)
+        float3 xformOp:scale = (0.3, 0.3, 0.3)
+        float3 xformOp:translate = (-1.4476364, 1.4980314, -1.9594153)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Sphere03" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = [
+            @Planets.usdz@</Sphere03>,
+            @Planets.usdz@</_materials/Material_025>
+        ]
+    )
+    {
+        rel material:binding = </Root/Material_025> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.44779813, 0, 0, 0.89413464)
+        float3 xformOp:scale = (0.2, 0.2, 0.2)
+        float3 xformOp:translate = (1.0050727, 2.2033489, -2.0264912)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Material_025" (
+        active = true
+        prepend references = @Planets.usdz@</_materials/Material_025>
+    )
+    {
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+    }
+
+    def "Material_033" (
+        active = true
+        prepend references = @Planets.usdz@</_materials/Material_033>
+    )
+    {
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+    }
+
+    def "Material_032" (
+        active = true
+        prepend references = @Planets.usdz@</_materials/Material_032>
+    )
+    {
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+    }
+
+    def "m01Material" (
+        active = true
+        prepend references = @Mountain01.usdz@</_materials/m01Material>
+    )
+    {
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+    }
+
+    def "Landscape_2" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707964, 0, 0)
+        }
+        prepend references = @Mountain01.usdz@</Landscape_01/Landscape_01>
+    )
+    {
+        rel material:binding = </Root/m01Material> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        float3 xformOp:scale = (1, 1, 0.9999997)
+        float3 xformOp:translate = (1.9128892, -1.4156103e-7, -1.6994578)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Sphere03_1" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = [
+            @Planets.usdz@</Sphere03>,
+            @Planets.usdz@</_materials/Material_025>
+        ]
+    )
+    {
+        rel material:binding = </Root/Material_032> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        token outputs:surface.connect = </Root/Sphere03_1/Principled_BSDF.outputs:surface>
+        quatf xformOp:orient = (0.44779813, 0, 0, 0.89413464)
+        float3 xformOp:scale = (0.15, 0.15, 0.15)
+        float3 xformOp:translate = (-0.63912576, 2.4181767, -1.911331)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Principled_BSDF"
+        {
+            color3f inputs:diffuseColor.connect = </Root/Sphere03_1/Image_Texture_001.outputs:rgb>
+            float3 inputs:normal.connect = </Root/Sphere03_1/Image_Texture_004.outputs:rgb>
+        }
+
+        over "Image_Texture_001"
+        {
+            float2 inputs:st.connect = </Root/Sphere03_1/uvmap.outputs:result>
+        }
+
+        over "Image_Texture_004"
+        {
+            float2 inputs:st.connect = </Root/Sphere03_1/uvmap.outputs:result>
+        }
+    }
+
+    def "rocks" (
+        active = true
+        prepend references = @rocks.usdz@
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (-22.586706, 0, 5.372574)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Clouds" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        prepend references = @Clouds.usdz@
+    )
+    {
+        rel material:binding = </Root/c03Material> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.99999994, 0, 0, 0)
+        float3 xformOp:scale = (0.04, 0.04, 0.04)
+        float3 xformOp:translate = (0, 9.187208, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "c03Material" (
+        active = true
+        prepend references = @Clouds.usdz@</_materials/c03Material>
+    )
+    {
+        token outputs:mtlx:surface
+        token outputs:realitykit:vertex
+    }
+
+    def "Landscape_3" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (-1.5707964, 0, 0)
+        }
+        prepend references = @Mountain01.usdz@</Landscape_01/Landscape_01>
+    )
+    {
+        rel material:binding = </Root/m01Material> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        quatf xformOp:orient = (0.70710677, -0.70710677, 0, 0)
+        float3 xformOp:scale = (1, 1, 0.9999997)
+        float3 xformOp:translate = (-2.1007743, -8.195639e-8, -1.6994559)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+
