@@ -1,12 +1,10 @@
-import {WindowManager, XR} from '@callstack/react-native-visionos';
+import {WindowManager} from '@callstack/react-native-visionos';
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Button from './components/Button';
 import {useAppStore} from './store';
 
-const secondWindow = WindowManager.getWindow('SecondWindow');
-
-function App(): React.JSX.Element {
+function SecondWindow(): React.JSX.Element {
   const [count, increment, decrement] = useAppStore(state => [
     state.count,
     state.increment,
@@ -16,9 +14,15 @@ function App(): React.JSX.Element {
     <ScrollView
       contentInsetAdjustmentBehavior="automatic"
       contentContainerStyle={styles.container}>
-      <Text style={[styles.title, styles.text]}>Hello React Conf! 💙</Text>
+      <Text style={[styles.title, styles.text]}>Second Window!</Text>
       <Text style={[styles.subtitle, styles.text]}>Count: {count}</Text>
       <View style={styles.buttonContainer}>
+        <Button
+          title="Close Window"
+          onPress={() => {
+            WindowManager.getWindow('SecondWindow').close();
+          }}
+        />
         <Button
           title="Increment"
           onPress={() => {
@@ -26,35 +30,9 @@ function App(): React.JSX.Element {
           }}
         />
         <Button
-          title="Increment"
+          title="Decrement"
           onPress={() => {
             decrement();
-          }}
-        />
-        <Text style={styles.sectionHeading}>XR</Text>
-        <Button
-          title="Open XR Session"
-          onPress={() => {
-            XR.requestSession('Callstack', {});
-          }}
-        />
-        <Button
-          title="Close XR Session"
-          onPress={() => {
-            XR.endSession();
-          }}
-        />
-        <Text style={styles.sectionHeading}>Window Manager</Text>
-        <Button
-          title="Open Second Window"
-          onPress={() => {
-            secondWindow.open();
-          }}
-        />
-        <Button
-          title="Close Second Window"
-          onPress={() => {
-            secondWindow.close();
           }}
         />
       </View>
@@ -64,7 +42,7 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 40,
+    margin: 20,
   },
   buttonContainer: {
     justifyContent: 'center',
@@ -78,18 +56,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   title: {
-    fontSize: 50,
+    fontSize: 35,
     marginTop: 20,
   },
   subtitle: {
-    fontSize: 35,
-  },
-  sectionHeading: {
-    marginTop: 30,
-    marginBottom: 10,
-    color: 'white',
-    fontSize: 30,
+    fontSize: 25,
   },
 });
 
-export default App;
+export default SecondWindow;
