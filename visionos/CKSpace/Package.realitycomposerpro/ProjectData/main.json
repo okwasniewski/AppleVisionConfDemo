@@ -1,5 +1,8 @@
 {
   "pathsToIds" : {
+    "CKSpace\/Sources\/CKSpace\/CKSpace.rkassets\/Atom2.usdz" : "1ECC4CFC-7F27-4E6C-B475-B944E2117149",
+    "CKSpace\/Sources\/CKSpace\/CKSpace.rkassets\/Character.usdz" : "4CD333D2-35C4-4A57-83B0-A2FF0A47C7E0",
+    "CKSpace\/Sources\/CKSpace\/CKSpace.rkassets\/Clouds.usdz" : "A1246F76-E0A3-47D5-8AED-501F219A874E",
     "CKSpace\/Sources\/CKSpace\/CKSpace.rkassets\/Planets.usdz" : "702E7972-087D-4205-8E16-A46CF391A1BD",
     "CKSpace\/Sources\/CKSpace\/CKSpace.rkassets\/rocks.usdz" : "9827F584-0A0F-4CED-83CE-5A4C4EA685B6",
     "CKSpace\/Sources\/CKSpace\/CKSpace.rkassets\/Scene.usda" : "315088BF-2E1A-4D03-9EDE-47E3BAB77B37"
