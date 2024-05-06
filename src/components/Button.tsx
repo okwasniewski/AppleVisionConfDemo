@@ -38,8 +38,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   titleText: {
-    // @ts-ignore-next-line Platform.isVision is available from 0.74
-    color: Platform.isVision ? 'white' : 'black',
+    color: Platform.OS === 'ios' && Platform.isVision ? 'white' : 'black',
     fontSize: 16,
     marginRight: 5,
   },

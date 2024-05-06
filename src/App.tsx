@@ -1,10 +1,10 @@
 import {WindowManager, XR} from '@callstack/react-native-visionos';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import React from 'react';
-import {Platform, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import Button from './components/Button';
 import {useAppStore} from './store';
-import {Model3dView} from 'react-native-model3d';
-
+import AnimatedModel3D from './components/AnimatedModel3D';
 const secondWindow = WindowManager.getWindow('SecondWindow');
 
 function App(): React.JSX.Element {
@@ -14,61 +14,57 @@ function App(): React.JSX.Element {
     state.decrement,
   ]);
   return (
-    <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-      contentContainerStyle={styles.container}>
-      <Text style={[styles.title, styles.text]}>Hello React Conf! 💙</Text>
-      <Text style={[styles.subtitle, styles.text]}>Count: {count}</Text>
-      <View style={styles.innerContainer}>
-        {Platform.OS === 'ios' && Platform.isVision ? (
-          <Model3dView
-            source="Character"
-            aspectRatio="fit"
-            style={styles.model3d}
-          />
-        ) : null}
-        <View style={styles.buttonContainer}>
-          <Button
-            title="Increment"
-            onPress={() => {
-              increment();
-            }}
-          />
-          <Button
-            title="Increment"
-            onPress={() => {
-              decrement();
-            }}
-          />
-          <Text style={styles.sectionHeading}>XR</Text>
-          <Button
-            title="Open XR Session"
-            onPress={() => {
-              XR.requestSession('Callstack', {});
-            }}
-          />
-          <Button
-            title="Close XR Session"
-            onPress={() => {
-              XR.endSession();
-            }}
-          />
-          <Text style={styles.sectionHeading}>Window Manager</Text>
-          <Button
-            title="Open Second Window"
-            onPress={() => {
-              secondWindow.open();
-            }}
-          />
-          <Button
-            title="Close Second Window"
-            onPress={() => {
-              secondWindow.close();
-            }}
-          />
+    <GestureHandlerRootView>
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        contentContainerStyle={styles.container}>
+        <Text style={[styles.title, styles.text]}>Hello React Conf! 💙</Text>
+        <Text style={[styles.subtitle, styles.text]}>Count: {count}</Text>
+        <View style={styles.innerContainer}>
+          <AnimatedModel3D />
+          <View style={styles.buttonContainer}>
+            <Button
+              title="Increment"
+              onPress={() => {
+                increment();
+              }}
+            />
+            <Button
+              title="Increment"
+              onPress={() => {
+                decrement();
+              }}
+            />
+            <Text style={styles.sectionHeading}>XR</Text>
+            <Button
+              title="Open XR Session"
+              onPress={() => {
+                XR.requestSession('Callstack', {});
+              }}
+            />
+            <Button
+              title="Close XR Session"
+              onPress={() => {
+                XR.endSession();
+              }}
+            />
+            <Text style={styles.sectionHeading}>Window Manager</Text>
+            <Button
+              title="Open Second Window"
+              onPress={() => {
+                secondWindow.open();
+              }}
+            />
+            <Button
+              title="Close Second Window"
+              onPress={() => {
+                secondWindow.close();
+              }}
+            />
+          </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </GestureHandlerRootView>
   );
 }
 

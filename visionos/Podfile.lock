@@ -1214,6 +1214,48 @@ PODS:
     - React-logger (= 0.74.0)
     - React-perflogger (= 0.74.0)
     - React-utils (= 0.74.0)
+  - RNGestureHandler (2.16.1):
+    - DoubleConversion
+    - glog
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
+  - RNReanimated (3.10.0):
+    - DoubleConversion
+    - glog
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - SocketRocket (0.7.0.1)
   - Yoga (0.0.0)
 
@@ -1277,6 +1319,8 @@ DEPENDENCIES:
   - "React-runtimescheduler (from `../node_modules/@callstack/react-native-visionos/ReactCommon/react/renderer/runtimescheduler`)"
   - "React-utils (from `../node_modules/@callstack/react-native-visionos/ReactCommon/react/utils`)"
   - "ReactCommon/turbomodule/core (from `../node_modules/@callstack/react-native-visionos/ReactCommon`)"
+  - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
   - "SocketRocket (from `../node_modules/@callstack/react-native-visionos/third-party-podspecs/SocketRocket.podspec`)"
   - "Yoga (from `../node_modules/@callstack/react-native-visionos/ReactCommon/yoga`)"
 
@@ -1393,6 +1437,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@callstack/react-native-visionos/ReactCommon/react/utils"
   ReactCommon:
     :path: "../node_modules/@callstack/react-native-visionos/ReactCommon"
+  RNGestureHandler:
+    :path: "../node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
   SocketRocket:
     :podspec: "../node_modules/@callstack/react-native-visionos/third-party-podspecs/SocketRocket.podspec"
   Yoga:
@@ -1455,6 +1503,8 @@ SPEC CHECKSUMS:
   React-runtimescheduler: ac15985dc46e97a4b4c5458463609b21ebf55157
   React-utils: cd95d814ad62af4ed186192c3a5ac56f589c7961
   ReactCommon: a1ab8ba3cdb3a3869399834928a30793a4a9d9c0
+  RNGestureHandler: 513d39e6eabf98448fe353876aea3bc35444a163
+  RNReanimated: 5b4443b3c13f9bc42683a3d25855c8c303e6c765
   SocketRocket: 0ba3e799f983d2dfa878777017659ef6c866e5c6
   Yoga: c218e1bc0ddbca97a3192b99c01b21b5ca0b1daa
 
