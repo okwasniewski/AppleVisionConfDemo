@@ -9,6 +9,9 @@ interface ButtonProps {
 }
 
 const Button = ({title, onPress, disabled}: ButtonProps) => {
+  if (Platform.OS === 'ios' && !Platform.isVision) {
+    <Button title={title} onPress={onPress} disabled={disabled} />;
+  }
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -27,6 +30,8 @@ const Button = ({title, onPress, disabled}: ButtonProps) => {
 
 export default Button;
 
+const isVision = Platform.OS === 'ios' && Platform.isVision;
+
 const styles = StyleSheet.create({
   touchable: {
     flexDirection: 'row',
@@ -38,8 +43,7 @@ const styles = StyleSheet.create({
     margin: 5,
   },
   titleText: {
-    // @ts-ignore-next-line Platform.isVision is available from 0.74
-    color: Platform.isVision ? 'white' : 'black',
+    color: isVision ? 'white' : 'black',
     fontSize: 16,
     marginRight: 5,
   },
