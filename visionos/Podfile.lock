@@ -962,6 +962,27 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
+  - react-native-model3d (0.2.0):
+    - DoubleConversion
+    - glog
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-jsi
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - React-nativeconfig (0.74.0)
   - React-NativeModulesApple (0.74.0):
     - glog
@@ -1230,6 +1251,7 @@ DEPENDENCIES:
   - "React-logger (from `../node_modules/@callstack/react-native-visionos/ReactCommon/logger`)"
   - "React-Mapbuffer (from `../node_modules/@callstack/react-native-visionos/ReactCommon`)"
   - "react-native-blur (from `../node_modules/@react-native-community/blur`)"
+  - react-native-model3d (from `../node_modules/react-native-model3d`)
   - "React-nativeconfig (from `../node_modules/@callstack/react-native-visionos/ReactCommon`)"
   - "React-NativeModulesApple (from `../node_modules/@callstack/react-native-visionos/ReactCommon/react/nativemodule/core/platform/ios`)"
   - "React-perflogger (from `../node_modules/@callstack/react-native-visionos/ReactCommon/reactperflogger`)"
@@ -1319,6 +1341,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@callstack/react-native-visionos/ReactCommon"
   react-native-blur:
     :path: "../node_modules/@react-native-community/blur"
+  react-native-model3d:
+    :path: "../node_modules/react-native-model3d"
   React-nativeconfig:
     :path: "../node_modules/@callstack/react-native-visionos/ReactCommon"
   React-NativeModulesApple:
@@ -1405,6 +1429,7 @@ SPEC CHECKSUMS:
   React-logger: 3e28b6ef2dcbe3aad2370ef44027fb267b17b215
   React-Mapbuffer: f979f5ae25b7730f2e8b465889430e5b06b901bb
   react-native-blur: 66ab4be7906270695a6d1bf0473c32ae0d7dcf23
+  react-native-model3d: b58e937538fc13fbd251f872ca66934feea2a22b
   React-nativeconfig: 15ebec4d95f243298427d7f14b25a38cdb1039c2
   React-NativeModulesApple: 83bc6aff9a360ce7bbb9a8e2f99c716a7c88038f
   React-perflogger: 926edf7d13b91aed2ff13a7ab5e30333814bdb0a

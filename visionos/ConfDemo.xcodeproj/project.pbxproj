@@ -13,6 +13,7 @@
 		767CEBBC2B582F6B000139AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CEBBB2B582F6B000139AD /* AppDelegate.swift */; };
 		767CEBBE2B582F78000139AD /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CEBBD2B582F78000139AD /* App.swift */; };
 		7699B88040F8A987B510C191 /* libPods-ConfDemo-ConfDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ConfDemo-ConfDemoTests.a */; };
+		76BA5BC32BE8C867001FB434 /* Character.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 76BA5BC22BE8C867001FB434 /* Character.usdz */; };
 		76EF59892BDF9A9A00A2FA17 /* CKImmersiveSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EF59882BDF9A9A00A2FA17 /* CKImmersiveSpace.swift */; };
 		76EF598F2BDFA0D000A2FA17 /* CKSpace in Resources */ = {isa = PBXBuildFile; fileRef = 76EF598E2BDFA0D000A2FA17 /* CKSpace */; };
 		76EF59922BDFA19200A2FA17 /* CKSpace in Frameworks */ = {isa = PBXBuildFile; productRef = 76EF59912BDFA19200A2FA17 /* CKSpace */; };
@@ -43,6 +44,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ConfDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		767CEBBB2B582F6B000139AD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ConfDemo/AppDelegate.swift; sourceTree = "<group>"; };
 		767CEBBD2B582F78000139AD /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = ConfDemo/App.swift; sourceTree = "<group>"; };
+		76BA5BC22BE8C867001FB434 /* Character.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Character.usdz; sourceTree = "<group>"; };
 		76EF59882BDF9A9A00A2FA17 /* CKImmersiveSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKImmersiveSpace.swift; sourceTree = "<group>"; };
 		76EF598E2BDFA0D000A2FA17 /* CKSpace */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CKSpace; sourceTree = "<group>"; };
 		76EF59932BDFA4FF00A2FA17 /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		13B07FAE1A68108700A75B9A /* ConfDemo */ = {
 			isa = PBXGroup;
 			children = (
+				76BA5BC22BE8C867001FB434 /* Character.usdz */,
 				767CEBBB2B582F6B000139AD /* AppDelegate.swift */,
 				767CEBBD2B582F78000139AD /* App.swift */,
 				76EF59932BDFA4FF00A2FA17 /* ImageBasedLighting.skybox */,
@@ -259,6 +262,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				76EF598F2BDFA0D000A2FA17 /* CKSpace in Resources */,
 				76EF59942BDFA4FF00A2FA17 /* ImageBasedLighting.skybox in Resources */,
+				76BA5BC32BE8C867001FB434 /* Character.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,10 +578,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/@callstack/react-native-visionos";
 				SDKROOT = iphoneos;
 				USE_HERMES = false;
@@ -645,10 +646,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/@callstack/react-native-visionos";
 				SDKROOT = iphoneos;
 				USE_HERMES = false;
