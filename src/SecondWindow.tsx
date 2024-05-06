@@ -1,53 +1,46 @@
 import {WindowManager} from '@callstack/react-native-visionos';
 import React from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Button from './components/Button';
-import {useAppStore} from './store';
+import AnimatedModel3D from './components/AnimatedModel3D';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {Item} from './data';
+import {BACKGROUND_COLOR} from './constants';
 
-function SecondWindow(): React.JSX.Element {
-  const [count, increment, decrement] = useAppStore(state => [
-    state.count,
-    state.increment,
-    state.decrement,
-  ]);
+interface SecondWindowProps {
+  item?: Item;
+}
+
+function SecondWindow({item}: SecondWindowProps): React.JSX.Element {
   return (
-    <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-      contentContainerStyle={styles.container}>
-      <Text style={[styles.title, styles.text]}>Second Window!</Text>
-      <Text style={[styles.subtitle, styles.text]}>Count: {count}</Text>
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Close Window"
-          onPress={() => {
-            WindowManager.getWindow('SecondWindow').close();
-          }}
-        />
-        <Button
-          title="Increment"
-          onPress={() => {
-            increment();
-          }}
-        />
-        <Button
-          title="Decrement"
-          onPress={() => {
-            decrement();
-          }}
-        />
+    <GestureHandlerRootView>
+      <View style={styles.container}>
+        {item ? <AnimatedModel3D source={item?.model3d} /> : null}
+        <View style={styles.buttonContainer}>
+          <Button
+            title="Close Window"
+            onPress={() => {
+              WindowManager.getWindow('SecondWindow').close();
+            }}
+          />
+        </View>
       </View>
-    </ScrollView>
+    </GestureHandlerRootView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    margin: 20,
+    padding: 20,
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: BACKGROUND_COLOR,
   },
   buttonContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 40,
   },
   text: {
     fontFamily: 'Courier New',

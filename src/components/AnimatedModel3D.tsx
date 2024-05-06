@@ -1,52 +1,55 @@
 import React, {useEffect} from 'react';
-import {Gesture, GestureDetector, Switch} from 'react-native-gesture-handler';
+import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 
 import {Model3dView} from 'react-native-model3d';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withSequence,
-  withSpring,
   withTiming,
   Easing,
   withRepeat,
+  interpolate,
 } from 'react-native-reanimated';
-import {View, Text, Platform, StyleSheet} from 'react-native';
+import {View, Platform, StyleSheet} from 'react-native';
 
 const AnimatedModel3DView = Animated.createAnimatedComponent(Model3dView);
-const DURATION = 10000;
+const DURATION = 15000;
 
-const AnimatedModel3D = () => {
-  const [isRotating, setIsRotating] = React.useState(false);
+interface AnimatedModel3DProps {
+  source: string;
+}
+
+const AnimatedModel3D = ({source}: AnimatedModel3DProps) => {
   const rotate = useSharedValue(0);
   const offsetX = useSharedValue(0);
-  const offsetY = useSharedValue(0);
+  const isDragging = useSharedValue(false);
 
   const pan = Gesture.Pan()
+    .onStart(() => {
+      isDragging.value = true;
+    })
     .onChange(event => {
       offsetX.value = event.translationX;
-      offsetY.value = event.translationY;
-    })
-    .onFinalize(() => {
-      offsetX.value = withSpring(0);
-      offsetY.value = withSpring(0);
     });
 
   const rotationStyle = useAnimatedStyle(() => {
     return {
       transform: [
-        {rotateY: `${rotate.value}deg`},
-        {translateX: offsetX.value},
-        {translateY: offsetY.value},
+        isDragging.value
+          ? {
+              rotateY: `${interpolate(
+                offsetX.value,
+                [-100, 100],
+                [-180, 180],
+              )}deg`,
+            }
+          : {rotateY: `${rotate.value}deg`},
       ],
     };
   });
 
   useEffect(() => {
-    if (!isRotating) {
-      rotate.value = withSpring(0);
-      return;
-    }
     rotate.value = withRepeat(
       withSequence(
         withTiming(1080, {duration: DURATION, easing: Easing.linear}),
@@ -55,7 +58,7 @@ const AnimatedModel3D = () => {
       -1,
       true,
     );
-  }, [isRotating, rotate]);
+  }, [rotate]);
 
   if (!(Platform.OS === 'ios' && Platform.isVision)) {
     return null;
@@ -65,18 +68,11 @@ const AnimatedModel3D = () => {
     <View style={styles.container}>
       <GestureDetector gesture={pan}>
         <AnimatedModel3DView
-          source="Character"
+          source={source}
           aspectRatio="fit"
           style={[rotationStyle, styles.model3d]}
         />
       </GestureDetector>
-      <View style={styles.switchContainer}>
-        <Text style={styles.switchText}>Rotate</Text>
-        <Switch
-          value={isRotating}
-          onChange={e => setIsRotating(e.nativeEvent.value)}
-        />
-      </View>
     </View>
   );
 };
