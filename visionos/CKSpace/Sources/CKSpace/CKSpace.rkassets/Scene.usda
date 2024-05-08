@@ -10,7 +10,7 @@
 
 def Xform "Root"
 {
-    reorder nameChildren = ["CKLogo", "Rocks1_1", "Cloud1", "Cloud2", "Cloud3", "Rocks1", "Rocks2", "Atom", "Planets1", "Mountain1", "Mountain2"]
+    reorder nameChildren = ["CKLogo", "Rocks1", "Rocks2", "Mountain1", "Mountain2", "Atom1", "Planet1", "Planet2", "Planet3"]
     def "CKLogo" (
         active = true
         references = @CS_Logo.usdz@
@@ -18,52 +18,6 @@ def Xform "Root"
     {
         float3 xformOp:scale = (0.05, 0.05, 0.05)
         float3 xformOp:translate = (0.000008414965, 2.221463, -2.7939677e-8)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "Cloud2" (
-        active = true
-        customData = {
-            float3 rotationEulerHint = (0, 0, -1.5758178)
-        }
-        references = @Clouds.usdz@
-    )
-    {
-        quatf xformOp:orient = (0.7053292, 0, 0, -0.7088799)
-        float3 xformOp:scale = (0.014446334, 0.014446334, 0.014446333)
-        float3 xformOp:translate = (1.9740511, 1.921086, -0.5880728)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "Cloud1" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-        customData = {
-            float3 rotationEulerHint = (0, 0, 1.5707964)
-        }
-        references = @Clouds.usdz@
-    )
-    {
-        rel material:binding = </Root/c03Material> (
-            bindMaterialAs = "weakerThanDescendants"
-        )
-        quatf xformOp:orient = (0.70710677, 0, 0, 0.70710677)
-        float3 xformOp:scale = (0.02, 0.02, 0.02)
-        float3 xformOp:translate = (-0.2216214, 2.8280878, -1.3146284)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "Cloud3" (
-        active = true
-        customData = {
-            float3 rotationEulerHint = (0, 0, -1.5707964)
-        }
-        references = @Clouds.usdz@
-    )
-    {
-        quatf xformOp:orient = (0.70710677, 0, 0, -0.70710677)
-        float3 xformOp:scale = (0.015660686, 0.015660686, 0.015660686)
-        float3 xformOp:translate = (-1.5449035, 2.2808905, -1.0046282)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 
@@ -203,16 +157,6 @@ def Xform "Root"
         }
     }
 
-    def "Atom" (
-        active = true
-        references = @Atom2.usdz@
-    )
-    {
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0.66142786, 2.3353512, 0.14161706)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
     def "Mountain1" (
         active = true
         customData = {
@@ -241,17 +185,47 @@ def Xform "Root"
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 
-    def "Planets1" (
+    def "Atom1" (
         active = true
-        customData = {
-            float3 rotationEulerHint = (-3.5324754e-7, 6.758389e-8, 6.494739)
-        }
-        references = @Planets.usdz@
+        prepend apiSchemas = ["MaterialBindingAPI"]
+        references = @Atom2.usdz@
     )
     {
-        quatf xformOp:orient = (0.9944108, -1.7920435e-7, 1.4955145e-8, 0.10557996)
-        float3 xformOp:scale = (0.3, 0.3, 0.3)
-        float3 xformOp:translate = (2.2009587, 1.9494598, -2.1238208)
+        rel material:binding = None (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (1.4235955, 2.8791087, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Planet1" (
+        active = true
+        references = @Planet_01.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.35, 0.35, 0.35)
+        float3 xformOp:translate = (1.4893382, 2.0728207, -0.51165503)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Planet2" (
+        active = true
+        references = @Planet_02.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.35, 0.35, 0.35)
+        float3 xformOp:translate = (0.4332292, 3.269107, 3.9115548e-8)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def "Planet3" (
+        active = true
+        references = @Planet_03.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.4, 0.4, 0.4)
+        float3 xformOp:translate = (-1.213178, 2.8210711, -0.1894471)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }

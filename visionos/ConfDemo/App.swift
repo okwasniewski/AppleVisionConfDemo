@@ -6,7 +6,7 @@ import React_RCTSwiftExtensions
 @main
 struct ConfDemoApp: App {
   @UIApplicationDelegateAdaptor var delegate: AppDelegate
-  @State private var immersionLevel: ImmersionStyle = .mixed
+  @State private var immersionLevel: ImmersionStyle = .progressive
   
   @Environment (\.reactContext) private var reactContext
   
@@ -18,6 +18,6 @@ struct ConfDemoApp: App {
     ImmersiveSpace(id: "Callstack") {
       CKImmersiveSpace()
     }
-    .immersionStyle(selection: $immersionLevel, in: .mixed, .progressive, .full)
+    .immersionStyle(selection: $immersionLevel, in: .progressive)
   }
 }

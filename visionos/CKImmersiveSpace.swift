@@ -8,6 +8,9 @@ struct CKImmersiveSpace: View {
   
   var body: some View {
     RealityView { content in
+      let rootEntity = Entity()
+      rootEntity.addSkybox(for: "ck-x-visionpro-bg")
+      content.add(rootEntity)
       scene = await setupScene()
       character = await setupCharacter()
       
@@ -51,14 +54,13 @@ struct CKImmersiveSpace: View {
   func setupSceneEntityAnimations() {
     endlessRotate(entityName: "Rocks1", axis: [0,0,1])
     endlessRotate(entityName: "Rocks2", axis: [0,0,1])
-    endlessRotate(entityName: "Cloud1", axis: [1,0,0])
-    endlessRotate(entityName: "Cloud2", axis: [1,0,0])
-    endlessRotate(entityName: "Cloud3", axis: [1,0,0])
-    endlessMove(entityName: "Planets1")
+    endlessRotate(entityName: "Planet1", axis: [1,0,0])
+    endlessRotate(entityName: "Planet2", axis: [1,0,0])
+    endlessRotate(entityName: "Planet3", axis: [1,0,0])
     endlessScale(entityName: "CKLogo")
     
     // Atom built-in animation
-    guard let atom = scene.findEntity(named: "Atom") else { return }
+    guard let atom = scene.findEntity(named: "Atom1") else { return }
     atom.availableAnimations.forEach { animation in
       atom.playAnimation(animation.repeat(duration: .infinity), transitionDuration: 1.25, startsPaused: false)
     }
