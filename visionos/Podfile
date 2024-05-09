@@ -21,7 +21,7 @@ target 'ConfDemo' do
   use_react_native!(
     :path => config[:reactNativePath],
     # Hermes is disabled for visionOS, until it's officially supported. If you want to run Hermes anyway, check this issue: https://github.com/callstack/react-native-visionos/issues/128
-    :hermes_enabled => false,
+    :hermes_enabled => true,
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
