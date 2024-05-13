@@ -998,7 +998,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-model3d (0.2.0):
+  - react-native-model3d (0.3.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1628,7 +1628,7 @@ SPEC CHECKSUMS:
   FBLazyVector: 293afe751603d1946bbe82254358072a95c2a7f4
   fmt: 5d9ffa7ccba126c08b730252123601d514652320
   glog: 4f05d17aa39a829fee878689fc9a41af587fabba
-  hermes-engine: 99f468bada5b8d77b61d19aa07361e5f7bbb5025
+  hermes-engine: 0cd47d817123e0df541399e47d5a63309571c404
   RCT-Folly: 70c792c856324d6a518af75b3a307c14c226343a
   RCTDeprecation: 3ca8b6c36bfb302e1895b72cfe7db0de0c92cd47
   RCTRequired: 2996cdf8cd9396290c3c7eb1bad291960ad786ce
@@ -1654,7 +1654,7 @@ SPEC CHECKSUMS:
   React-logger: 3e28b6ef2dcbe3aad2370ef44027fb267b17b215
   React-Mapbuffer: f979f5ae25b7730f2e8b465889430e5b06b901bb
   react-native-blur: c1c54c593794644ce21d1c4cd75021158d233d20
-  react-native-model3d: 8624fb11450dae55abc5b6a0e0b6f0acb22261a5
+  react-native-model3d: c55231f735d140db172ccde77fabd0a55aef690f
   react-native-safe-area-context: 7f54ad0a774de306ab790c70d9d950321e5c5449
   React-nativeconfig: 15ebec4d95f243298427d7f14b25a38cdb1039c2
   React-NativeModulesApple: ff17f6ef276864285aa0644aee5ab36252e016e4
@@ -1686,7 +1686,7 @@ SPEC CHECKSUMS:
   RNReanimated: 2f33b2f8c79c456ce3858a7cd2e07460eb5f61e0
   RNScreens: 63fe8222c172a79f5c30dd1aefaeb369c6eb57b6
   SocketRocket: 0ba3e799f983d2dfa878777017659ef6c866e5c6
-  Yoga: 434f72da52c1ebf4cfa155bd4fba96fdf2aac2d1
+  Yoga: c218e1bc0ddbca97a3192b99c01b21b5ca0b1daa
 
 PODFILE CHECKSUM: 759d1ace1861b6cf1478fecc2fb7f2000ad005ea
 
