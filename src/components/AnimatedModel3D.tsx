@@ -24,6 +24,7 @@ const AnimatedModel3D = ({source}: AnimatedModel3DProps) => {
   const rotate = useSharedValue(0);
   const offsetX = useSharedValue(0);
   const isDragging = useSharedValue(false);
+  const [isLoaded, setIsLoaded] = React.useState(false);
 
   const pan = Gesture.Pan()
     .onStart(() => {
@@ -50,6 +51,9 @@ const AnimatedModel3D = ({source}: AnimatedModel3DProps) => {
   });
 
   useEffect(() => {
+    if (!isLoaded) {
+      return;
+    }
     rotate.value = withRepeat(
       withSequence(
         withTiming(1080, {duration: DURATION, easing: Easing.linear}),
@@ -58,7 +62,7 @@ const AnimatedModel3D = ({source}: AnimatedModel3DProps) => {
       -1,
       true,
     );
-  }, [rotate]);
+  }, [isLoaded, rotate]);
 
   if (!(Platform.OS === 'ios' && Platform.isVision)) {
     return null;
@@ -70,6 +74,9 @@ const AnimatedModel3D = ({source}: AnimatedModel3DProps) => {
         <AnimatedModel3DView
           source={source}
           aspectRatio="fit"
+          onLoad={() => {
+            setIsLoaded(true);
+          }}
           style={[rotationStyle, styles.model3d]}
         />
       </GestureDetector>
