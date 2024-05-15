@@ -10,6 +10,11 @@
 		00E356F31AD99517003FC87E /* ConfDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ConfDemoTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-ConfDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ConfDemo.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2019453E2BF57A01006E2D40 /* sneaker_pegasustrail.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2019453D2BF57A01006E2D40 /* sneaker_pegasustrail.usdz */; };
+		201945432BF57C86006E2D40 /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2019453F2BF57C85006E2D40 /* fender_stratocaster.usdz */; };
+		201945442BF57C86006E2D40 /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 201945402BF57C86006E2D40 /* gramophone.usdz */; };
+		201945452BF57C86006E2D40 /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 201945412BF57C86006E2D40 /* chair_swan.usdz */; };
+		201945462BF57C86006E2D40 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 201945422BF57C86006E2D40 /* tv_retro.usdz */; };
 		7616E3F42BEB6CCC005C2E66 /* ImmersiveSpace+Skybox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7616E3F32BEB6CCC005C2E66 /* ImmersiveSpace+Skybox.swift */; };
 		767CEBBC2B582F6B000139AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CEBBB2B582F6B000139AD /* AppDelegate.swift */; };
 		767CEBBE2B582F78000139AD /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CEBBD2B582F78000139AD /* App.swift */; };
@@ -38,6 +43,11 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ConfDemo/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ConfDemo/Info.plist; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ConfDemo-ConfDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfDemo-ConfDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2019453D2BF57A01006E2D40 /* sneaker_pegasustrail.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = sneaker_pegasustrail.usdz; sourceTree = "<group>"; };
+		2019453F2BF57C85006E2D40 /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
+		201945402BF57C86006E2D40 /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
+		201945412BF57C86006E2D40 /* chair_swan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair_swan.usdz; sourceTree = "<group>"; };
+		201945422BF57C86006E2D40 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-ConfDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfDemo.debug.xcconfig"; path = "Target Support Files/Pods-ConfDemo/Pods-ConfDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-ConfDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfDemo.release.xcconfig"; path = "Target Support Files/Pods-ConfDemo/Pods-ConfDemo.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-ConfDemo-ConfDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfDemo-ConfDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-ConfDemo-ConfDemoTests/Pods-ConfDemo-ConfDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +103,7 @@
 		13B07FAE1A68108700A75B9A /* ConfDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2019453C2BF579ED006E2D40 /* models3d */,
 				767CEBBB2B582F6B000139AD /* AppDelegate.swift */,
 				767CEBBD2B582F78000139AD /* App.swift */,
 				76EF59932BDFA4FF00A2FA17 /* ImageBasedLighting.skybox */,
@@ -102,6 +113,18 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 			);
 			name = ConfDemo;
+			sourceTree = "<group>";
+		};
+		2019453C2BF579ED006E2D40 /* models3d */ = {
+			isa = PBXGroup;
+			children = (
+				201945412BF57C86006E2D40 /* chair_swan.usdz */,
+				2019453F2BF57C85006E2D40 /* fender_stratocaster.usdz */,
+				201945402BF57C86006E2D40 /* gramophone.usdz */,
+				201945422BF57C86006E2D40 /* tv_retro.usdz */,
+				2019453D2BF57A01006E2D40 /* sneaker_pegasustrail.usdz */,
+			);
+			name = models3d;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -262,8 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				201945442BF57C86006E2D40 /* gramophone.usdz in Resources */,
+				201945432BF57C86006E2D40 /* fender_stratocaster.usdz in Resources */,
+				2019453E2BF57A01006E2D40 /* sneaker_pegasustrail.usdz in Resources */,
 				76EF598F2BDFA0D000A2FA17 /* CKSpace in Resources */,
 				76EF59942BDFA4FF00A2FA17 /* ImageBasedLighting.skybox in Resources */,
+				201945462BF57C86006E2D40 /* tv_retro.usdz in Resources */,
+				201945452BF57C86006E2D40 /* chair_swan.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +518,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S799L9W4M;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ConfDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,6 +553,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2S799L9W4M;
 				INFOPLIST_FILE = ConfDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
