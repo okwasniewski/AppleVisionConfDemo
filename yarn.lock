@@ -5778,10 +5778,10 @@ react-native-gesture-handler@^2.16.1:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
-react-native-model3d@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/react-native-model3d/-/react-native-model3d-0.3.0.tgz#b45f12ba22bbab3a075fcc233cc347f1058790df"
-  integrity sha512-iOjR11IwlIlJdlJ65HSB4Pub8YLWGCO8VP00yDP4MYZwJHFCVS7Kz55N0ugnS8HmXjVrDuBD32uKpxsjlXH9yA==
+react-native-model3d@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-model3d/-/react-native-model3d-0.3.1.tgz#c31dc5678b38ab992a795fd8e8372f71ce7447f7"
+  integrity sha512-GdgASDAwn4vuu0HDBmNjqSfqLIzJy8nsrd/B10ThfR7UMYlSLaJIztZ2hFIf+Q6kRJDVyv/BAp8Z1oF19O4XUA==
 
 react-native-reanimated@^3.10.0:
   version "3.11.0"
