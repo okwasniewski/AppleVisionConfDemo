@@ -8,25 +8,22 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-let isImmersiveSpaceOpen = false;
-
 const Logo = () => {
+  const [spaceOpen, setSpaceOpen] = React.useState(false);
   return (
     <TouchableOpacity
       style={styles.touchable}
       onPress={async () => {
-        if (isImmersiveSpaceOpen) {
-          await XR.endSession();
-          isImmersiveSpaceOpen = false;
-          return;
+        if (spaceOpen) {
+          XR.endSession();
+        } else {
+          try {
+            await XR.requestSession('Callstack', {});
+          } catch {
+            Alert.alert('Error', 'Failed to open immersive space');
+          }
         }
-
-        try {
-          await XR.requestSession('Callstack', {});
-          isImmersiveSpaceOpen = true;
-        } catch {
-          Alert.alert('Error', 'Failed to open immersive space');
-        }
+        setSpaceOpen(state => !state);
       }}>
       <Image source={require('../assets/logo.png')} style={styles.logo} />
     </TouchableOpacity>
