@@ -23,6 +23,7 @@
 		76EF598F2BDFA0D000A2FA17 /* CKSpace in Resources */ = {isa = PBXBuildFile; fileRef = 76EF598E2BDFA0D000A2FA17 /* CKSpace */; };
 		76EF59922BDFA19200A2FA17 /* CKSpace in Frameworks */ = {isa = PBXBuildFile; productRef = 76EF59912BDFA19200A2FA17 /* CKSpace */; };
 		76EF59942BDFA4FF00A2FA17 /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 76EF59932BDFA4FF00A2FA17 /* ImageBasedLighting.skybox */; };
+		E8BF32E5FCFA2F6EA7C0AD46 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 0AF07D1B54E78736DA152451 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		00E356EE1AD99517003FC87E /* ConfDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConfDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* ConfDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfDemoTests.m; sourceTree = "<group>"; };
+		0AF07D1B54E78736DA152451 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ConfDemo/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ConfDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConfDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ConfDemo/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ConfDemo/Info.plist; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				7616E3F32BEB6CCC005C2E66 /* ImmersiveSpace+Skybox.swift */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
+				0AF07D1B54E78736DA152451 /* PrivacyInfo.xcprivacy */,
 			);
 			name = ConfDemo;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				76EF59942BDFA4FF00A2FA17 /* ImageBasedLighting.skybox in Resources */,
 				201945462BF57C86006E2D40 /* tv_retro.usdz in Resources */,
 				201945452BF57C86006E2D40 /* chair_swan.usdz in Resources */,
+				E8BF32E5FCFA2F6EA7C0AD46 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +522,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2S799L9W4M;
+				DEVELOPMENT_TEAM = Z3M9P6G4WY;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ConfDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -542,6 +546,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 7;
 				VERSIONING_SYSTEM = "apple-generic";
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -553,7 +558,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2S799L9W4M;
+				DEVELOPMENT_TEAM = Z3M9P6G4WY;
 				INFOPLIST_FILE = ConfDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -574,6 +579,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 7;
 				VERSIONING_SYSTEM = "apple-generic";
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
@@ -650,9 +656,13 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/@callstack/react-native-visionos";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				USE_HERMES = true;
 			};
 			name = Debug;
@@ -714,6 +724,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -722,7 +733,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/@callstack/react-native-visionos";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

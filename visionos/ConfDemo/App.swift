@@ -8,7 +8,7 @@ struct ConfDemoApp: App {
   @UIApplicationDelegateAdaptor var delegate: AppDelegate
   @State private var immersionLevel: ImmersionStyle = .progressive
   
-  @Environment (\.reactContext) private var reactContext
+  @Environment(\.reactContext) private var reactContext
   
   var body: some Scene {
     RCTMainWindow(moduleName: "ConfDemo")
