@@ -16,6 +16,8 @@
 		201945452BF57C86006E2D40 /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 201945412BF57C86006E2D40 /* chair_swan.usdz */; };
 		201945462BF57C86006E2D40 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 201945422BF57C86006E2D40 /* tv_retro.usdz */; };
 		7616E3F42BEB6CCC005C2E66 /* ImmersiveSpace+Skybox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7616E3F32BEB6CCC005C2E66 /* ImmersiveSpace+Skybox.swift */; };
+		7625CAAF2C91C5FF0003CDAF /* laboratory.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7625CAAE2C91C5FF0003CDAF /* laboratory.usdz */; };
+		7625CAB32C91D8510003CDAF /* ModifiedLab.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 7625CAB22C91D8510003CDAF /* ModifiedLab.usdz */; };
 		767CEBBC2B582F6B000139AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CEBBB2B582F6B000139AD /* AppDelegate.swift */; };
 		767CEBBE2B582F78000139AD /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767CEBBD2B582F78000139AD /* App.swift */; };
 		7699B88040F8A987B510C191 /* libPods-ConfDemo-ConfDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ConfDemo-ConfDemoTests.a */; };
@@ -55,6 +57,8 @@
 		5B7EB9410499542E8C5724F5 /* Pods-ConfDemo-ConfDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfDemo-ConfDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-ConfDemo-ConfDemoTests/Pods-ConfDemo-ConfDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ConfDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7616E3F32BEB6CCC005C2E66 /* ImmersiveSpace+Skybox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImmersiveSpace+Skybox.swift"; sourceTree = "<group>"; };
+		7625CAAE2C91C5FF0003CDAF /* laboratory.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = laboratory.usdz; sourceTree = "<group>"; };
+		7625CAB22C91D8510003CDAF /* ModifiedLab.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = ModifiedLab.usdz; sourceTree = "<group>"; };
 		767CEBBB2B582F6B000139AD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ConfDemo/AppDelegate.swift; sourceTree = "<group>"; };
 		767CEBBD2B582F78000139AD /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = App.swift; path = ConfDemo/App.swift; sourceTree = "<group>"; };
 		76EF59882BDF9A9A00A2FA17 /* CKImmersiveSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKImmersiveSpace.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 		2019453C2BF579ED006E2D40 /* models3d */ = {
 			isa = PBXGroup;
 			children = (
+				7625CAB22C91D8510003CDAF /* ModifiedLab.usdz */,
+				7625CAAE2C91C5FF0003CDAF /* laboratory.usdz */,
 				201945412BF57C86006E2D40 /* chair_swan.usdz */,
 				2019453F2BF57C85006E2D40 /* fender_stratocaster.usdz */,
 				201945402BF57C86006E2D40 /* gramophone.usdz */,
@@ -230,6 +236,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7625CAAB2C91C0F60003CDAF /* PBXTargetDependency */,
 			);
 			name = ConfDemo;
 			packageProductDependencies = (
@@ -290,10 +297,12 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				201945442BF57C86006E2D40 /* gramophone.usdz in Resources */,
 				201945432BF57C86006E2D40 /* fender_stratocaster.usdz in Resources */,
+				7625CAB32C91D8510003CDAF /* ModifiedLab.usdz in Resources */,
 				2019453E2BF57A01006E2D40 /* sneaker_pegasustrail.usdz in Resources */,
 				76EF598F2BDFA0D000A2FA17 /* CKSpace in Resources */,
 				76EF59942BDFA4FF00A2FA17 /* ImageBasedLighting.skybox in Resources */,
 				201945462BF57C86006E2D40 /* tv_retro.usdz in Resources */,
+				7625CAAF2C91C5FF0003CDAF /* laboratory.usdz in Resources */,
 				201945452BF57C86006E2D40 /* chair_swan.usdz in Resources */,
 				E8BF32E5FCFA2F6EA7C0AD46 /* PrivacyInfo.xcprivacy in Resources */,
 			);
@@ -459,6 +468,10 @@
 			isa = PBXTargetDependency;
 			target = 13B07F861A680F5B00A75B9A /* ConfDemo */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+		7625CAAB2C91C0F60003CDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7625CAAA2C91C0F60003CDAF /* CKSpace */;
 		};
 /* End PBXTargetDependency section */
 
@@ -656,10 +669,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/@callstack/react-native-visionos";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -733,10 +743,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/@callstack/react-native-visionos";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -777,6 +784,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7625CAAA2C91C0F60003CDAF /* CKSpace */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CKSpace;
+		};
 		76EF59912BDFA19200A2FA17 /* CKSpace */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CKSpace;
