@@ -24,7 +24,7 @@ struct CKImmersiveSpace: View {
   @MainActor
   func setupCharacter() async -> Entity {
     guard let character = try? await Entity(named: "Character", in: cKSpaceBundle) else { return Entity() }
-    guard let resource = try? await EnvironmentResource(named: "ImageBasedLight") else { return Entity() }
+    guard let resource = try? await EnvironmentResource(named: "ImageBasedLighting") else { return Entity() }
     let iblComponent = ImageBasedLightComponent(source: .single(resource), intensityExponent: 0.25)
     character.components.set(iblComponent)
     character.components.set(ImageBasedLightReceiverComponent(imageBasedLight: character))
@@ -42,7 +42,7 @@ struct CKImmersiveSpace: View {
     
     // Offset the scene so it doesn't appear underneath the user or conflict with the main window.
     immersiveContentEntity.position = SIMD3<Float>(0, 0, -2)
-    guard let resource = try? await EnvironmentResource(named: "ImageBasedLight") else { return Entity() }
+    guard let resource = try? await EnvironmentResource(named: "ImageBasedLighting") else { return Entity() }
     let iblComponent = ImageBasedLightComponent(source: .single(resource), intensityExponent: 0.25)
     immersiveContentEntity.components.set(iblComponent)
     immersiveContentEntity.components.set(ImageBasedLightReceiverComponent(imageBasedLight: immersiveContentEntity))
