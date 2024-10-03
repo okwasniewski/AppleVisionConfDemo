@@ -73,7 +73,7 @@ const AnimatedModel3D = ({source}: AnimatedModel3DProps) => {
       <GestureDetector gesture={pan}>
         <AnimatedModel3DView
           source={source}
-          aspectRatio="fit"
+          modelAspectRatio="fit"
           onLoad={() => {
             setIsLoaded(true);
           }}

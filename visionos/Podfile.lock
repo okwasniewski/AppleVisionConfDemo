@@ -1294,7 +1294,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-model3d (0.3.1):
+  - react-native-model3d (0.4.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1968,7 +1968,7 @@ SPEC CHECKSUMS:
   React-Mapbuffer: b925e985164304a420b29103c38c6c9d91691d2d
   React-microtasksnativemodule: 5fe43b1e2ec37bf904203618e623c293a9bbe9aa
   react-native-blur: a1bf334589f44658a58a859b1f3defe28e367fcf
-  react-native-model3d: f4ba847081576a80e5938107866512d2c71650a7
+  react-native-model3d: 7eac439f35dc2b31505b797925d3e63d64acb098
   react-native-safe-area-context: 851c62c48dce80ccaa5637b6aa5991a1bc36eca9
   React-nativeconfig: afe30c46ab7d8b251f38961a644698387f5f9e6d
   React-NativeModulesApple: 911b9a9337ae50d45647817c57c30e5865e1be57
